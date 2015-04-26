@@ -1,7 +1,7 @@
 # conlog
 Simple colorful logger for node.js console
 
-```npm install conlog```
+  [![NPM](https://nodei.co/npm/conlog.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/conlog/)
 
 ```javascript
 var __c = require('./index')('test');
