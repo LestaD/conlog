@@ -21,3 +21,9 @@ You can use attributes from [Colors](https://www.npmjs.com/package/colors):
 "exit".green.li();
 "quit".green.li();
 ```
+
+An you can use `%s` template:
+```javascript
+"Start log in %s environment".log("debug");
+"%s listening on %s port".info("Express", "1240");
+```
