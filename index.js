@@ -59,7 +59,9 @@ String.prototype.log = function() {
 		_this = _this.green;
 	}
 
-	console.log( time() + ' ' + name + _this);
+	var string = time() + ' ' + name + _this;
+
+	console.log.apply(console, [string].concat(Array.prototype.slice.call(arguments)));
 
 	return this;
 };
@@ -76,7 +78,8 @@ String.prototype.error = function() {
 		_this = _this.red;
 	}
 
-	console.error( time() + ' ' + name + _this);
+	var string = time() + ' ' + name + _this;
+	console.error.apply(console, [string].concat(Array.prototype.slice.call(arguments)));
 
 	return this;
 };
@@ -93,7 +96,8 @@ String.prototype.warn = function() {
 		_this = "Warning! ".italic.yellow + _this.yellow;
 	}
 
-	console.warn( time() + ' ' + name + _this);
+	var string = time() + ' ' + name + _this;
+	console.warn.apply(console, [string].concat(Array.prototype.slice.call(arguments)));
 
 	return this;
 };
@@ -110,7 +114,8 @@ String.prototype.info = function() {
 		_this = _this.white;
 	}
 
-	console.info( time() + ' ' + name + _this);
+	var string = time() + ' ' + name + _this;
+	console.info.apply(console, [string].concat(Array.prototype.slice.call(arguments)));
 
 	return this;
 };
@@ -126,7 +131,8 @@ String.prototype.debug = function() {
 		_this = _this.white;
 	}
 
-	console.log( '     debug     '.gray + ' ' + name + _this);
+	var string = '     debug     '.gray + ' ' + name + _this;
+	console.log.apply(console, [string].concat(Array.prototype.slice.call(arguments)));
 
 	return this;
 };
@@ -136,20 +142,10 @@ String.prototype.li = function() {
 	var _this = String(this);
 	var name = String(appname ? ( '[' + appname + '] ') : '');
 
-	console.log( '               '.black + ' ' + name.black + _this);
+	var string = '               '.black + ' ' + name.black + _this;
+	console.log.apply(console, [string].concat(Array.prototype.slice.call(arguments)));
 
 	return this;
 };
 
 
-
-function dummy__s1(){
-	// good access logger
-	var Console = require('console').Console,
-		fs = require('fs'),
-		fileStream = fs.createWriteStream('../access.log'),
-		access = new Console(fileStream, fileStream);
-
-	// access.log('Any', 'code', 11);
-	// module.exports = access;
-}
