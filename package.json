@@ -1,6 +1,6 @@
 {
   "name": "conlog",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Simple logger for colorful console in node.js",
   "main": "index.js",
   "scripts": {
