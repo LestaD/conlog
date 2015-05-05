@@ -2,7 +2,7 @@ var colors = require('colors');
 var appname = false;
 var colorsenabled = true;
 
-module.exports = function(_appname, _colorsenabled) {
+function Conlog(_appname, _colorsenabled) {
 	if (typeof _appname === 'string') {
 		appname = _appname;
 	}
@@ -10,6 +10,36 @@ module.exports = function(_appname, _colorsenabled) {
 	if (_colorsenabled === false) {
 		colorsenabled = false;
 	}
+}
+
+Conlog.prototype.name = function(name) {
+	if (typeof name !== 'string') {
+		throw new Error('Wrong type');
+	}
+	appname = name;
+}
+
+Conlog.prototype.disable = function() {
+	colorsenabled = false;
+}
+
+Conlog.prototype.enable = function() {
+	colorsenabled = true;
+}
+
+Conlog.prototype.empty =
+String.prototype.empty = function(lines) {
+	if (typeof lines === "undefined") {
+		lines = 1;
+	}
+	else {
+		lines = Number.parseInt(lines);
+	}
+
+	if (lines < 1) {
+		lines = 1;
+	}
+	console.log("\n".repeat(lines-1));
 }
 
 var _monthes = [
@@ -148,4 +178,6 @@ String.prototype.li = function() {
 	return this;
 };
 
-
+module.exports = function(a, b){
+	return new Conlog(a, b);
+};
