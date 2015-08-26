@@ -8,6 +8,7 @@ Simple colorful logger for node.js console
   [![npm version](https://badge.fury.io/js/conlog.svg)](http://badge.fury.io/js/conlog)
   [![Code Climate](https://codeclimate.com/github/LestaD/conlog/badges/gpa.svg)](https://codeclimate.com/github/LestaD/conlog)
   ![Downloads](https://img.shields.io/github/downloads/lestad/conlog/latest/total.svg)
+  ![GitHub tag](https://img.shields.io/github/tag/lestad/conlog.svg)
   
 ## Using
 
