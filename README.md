@@ -3,6 +3,10 @@ Simple colorful logger for node.js console
 
   [![NPM](https://nodei.co/npm/conlog.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/conlog/)
   
+  ![Mocha Testing](https://img.shields.io/badge/build-passing-brightgreen.svg)
+  ![Dependencies](https://david-dm.org/lestad/conlog.svg)
+  [![npm version](https://badge.fury.io/js/conlog.svg)](http://badge.fury.io/js/conlog)
+  
 ## Using
 
 ```javascript
