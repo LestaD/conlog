@@ -6,6 +6,8 @@ Simple colorful logger for node.js console
   ![Mocha Testing](https://img.shields.io/badge/build-passing-brightgreen.svg)
   ![Dependencies](https://david-dm.org/lestad/conlog.svg)
   [![npm version](https://badge.fury.io/js/conlog.svg)](http://badge.fury.io/js/conlog)
+  [![Code Climate](https://codeclimate.com/github/LestaD/conlog/badges/gpa.svg)](https://codeclimate.com/github/LestaD/conlog)
+  ![Downloads](https://img.shields.io/github/downloads/lestad/conlog/latest/total.svg)
   
 ## Using
 
